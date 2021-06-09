@@ -30,13 +30,21 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
+<<<<<<< HEAD
             Did you forget to set it in your environment?')
+=======
+            Did you forget to set it in your environment.')
+>>>>>>> 80ff6b5ea18adffd96067ea55d206a0ea5934290
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
+<<<<<<< HEAD
         'client_secret': intent.client_secret,
+=======
+        'client_secret': client_secret,
+>>>>>>> 80ff6b5ea18adffd96067ea55d206a0ea5934290
     }
 
     return render(request, template, context)

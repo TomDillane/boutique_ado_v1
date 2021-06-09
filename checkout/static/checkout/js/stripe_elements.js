@@ -32,11 +32,16 @@ card.mount('#card-element');
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
+<<<<<<< HEAD
         var html = `
+=======
+        var html = 
+>>>>>>> 80ff6b5ea18adffd96067ea55d206a0ea5934290
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
             </span>
             <span>${event.error.message}</span>
+<<<<<<< HEAD
         `;
         $(errorDiv).html(html);
     } else {
@@ -72,4 +77,11 @@ form.addEventListener('submit', function(ev) {
             }
         }
     });
+=======
+            ;
+            $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+>>>>>>> 80ff6b5ea18adffd96067ea55d206a0ea5934290
 });
